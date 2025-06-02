@@ -13,12 +13,12 @@ os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 
 # Custom model loading with legacy support
 try:
-    model = load_model("InceptionV3_final.h5", compile=False)
+    model = load_model("resnet101_model.h5", compile=False)
 except TypeError as e:
     print(f"First loading attempt failed: {e}")
     # Try with custom objects and legacy mode
     tf.keras.utils.disable_interactive_logging()
-    model = load_model("InceptionV3_final.h5", 
+    model = load_model("resnet101_model.h5", 
                       compile=False,
                       custom_objects={'BatchNormalization': tf.keras.layers.BatchNormalization})
     
