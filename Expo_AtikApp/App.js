@@ -18,7 +18,7 @@ export default function App() {
   const [result, setResult] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const SERVER_URL = 'http://10.54.0.53:5000/predict'; // Kendi IP adresin
+  const SERVER_URL = 'http://10.7.87.83:5000/predict';
 
   const pickImage = async (fromCamera) => {
     try {
